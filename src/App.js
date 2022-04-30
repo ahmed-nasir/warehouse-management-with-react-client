@@ -16,7 +16,7 @@ function App() {
       <h1 className='text-primary'>Warehouse management</h1>
       <Routes>
         <Route path='/' element={<Home></Home>}/>
-        <Route path='/' element={<Home></Home>}/>
+        
         <Route path='/login' element={<Login></Login>}/>
         <Route path='/register' element={<Register></Register>}/>
         
