@@ -11,7 +11,7 @@ import Register from './component/Login/Register/Register';
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <Header></Header>
       <h1 className='text-primary'>Warehouse management</h1>
       <Routes>

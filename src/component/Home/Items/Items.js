@@ -4,7 +4,8 @@ import './items.css'
 const Items = () => {
     const [products,setProducts]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/item')
+        // http://localhost:5000/item
+        fetch('fakedata.json')
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
@@ -16,7 +17,7 @@ const Items = () => {
             <h2>Items Section</h2>
             <div className='items-container'>
             {
-                products.map(product=><Item key={product._id} product={product}></Item>)
+                products.map(product=><Item key={product.id} product={product}></Item>)
             }
             </div>
         </div>
