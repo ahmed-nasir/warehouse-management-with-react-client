@@ -15,7 +15,7 @@ const Items = () => {
     return (
         <div className='container'>
             <h2>Items Section</h2>
-            <div className='items-container'>
+            <div className='row justify-content-center gap-3'>
             {
                 products.map(product=><Item key={product.id} product={product}></Item>)
             }

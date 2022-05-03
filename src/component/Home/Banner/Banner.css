@@ -28,7 +28,7 @@
     font-weight: 600;
     line-height: 1.4;
     font-size: 3.5rem;
-    text-align: right;
+    text-align: center;
 
 }
 /* .the-inner span {
@@ -37,7 +37,7 @@
 
 .the-inner p {
     color: #ffffff;
-    text-align: right;
+    text-align: center;
     font-size: 1.6rem;
 }
 

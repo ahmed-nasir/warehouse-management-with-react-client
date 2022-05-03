@@ -6,7 +6,7 @@ const Item = ({product}) => {
     console.log(name)
 
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem' }} className='col-sm-12 col-md-6 col-lg-4'>
             <Card.Img variant="top" src={img} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>

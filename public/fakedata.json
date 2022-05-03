@@ -1,21 +1,21 @@
 [
     {
         "id": 1,
-        "name": "ENGINE DIAGNOSTIC",
+        "name": "GAS T-Shirt",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
         "img": "https://i.ibb.co/qsMXP1Z/tshirt-1.jpg"
     },
     {
         "id": 2,
-        "name": "WHEEL ALIGNMENT",
+        "name": "PUR & KLEEN T-shirt",
         "price": "100",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
         "img": "https://i.ibb.co/6ZpgQX5/tshirt-2.jpg"
     },
     {
         "id": 3,
-        "name": "OIL CHANGING",
+        "name": "PHOENIX T-Shirt",
         "price": "150",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
         "img": "https://i.ibb.co/17J0hgk/tshirt-3.jpg"
