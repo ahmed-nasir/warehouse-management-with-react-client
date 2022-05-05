@@ -13,7 +13,7 @@ function App() {
   return (
     <div >
       <Header></Header>
-      <h1 className='text-primary'>Warehouse management</h1>
+      
       <Routes>
         <Route path='/' element={<Home></Home>}/>
         

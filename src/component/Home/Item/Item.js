@@ -3,7 +3,7 @@ import { Button, Card } from 'react-bootstrap';
 
 const Item = ({product}) => {
     const {id,name,img,description,price}=product;
-    console.log(name)
+    // console.log(name)
 
     return (
         <Card style={{ width: '18rem' }} className='col-sm-12 col-md-6 col-lg-4'>
