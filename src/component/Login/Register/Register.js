@@ -3,6 +3,7 @@ import { Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 
 const Register = () => {
     const [userInfo, setUserInfo] = useState({
@@ -71,9 +72,9 @@ const Register = () => {
 
 
 
-    // if (loading) {
-    //     return <Loading></Loading>
-    // }
+    if (loading) {
+        return <Loading></Loading>
+    }
     console.log(user)
     // useEffect(() => {
     if (user) {
