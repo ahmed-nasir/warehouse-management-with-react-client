@@ -12,6 +12,8 @@ import MyItem from './component/MyItem/MyItem';
 import RequirAuth from './component/Login/RequirAuth/RequirAuth';
 import ManageItem from './component/ManageItem/ManageItem';
 import Blog from './component/Blog/Blog';
+import ItemDetails from './component/Home/ItemDetails/ItemDetails';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -19,27 +21,31 @@ function App() {
   return (
     <div >
       <Header></Header>
-      
+      <ToastContainer />
+
       <Routes>
-        <Route path='/' element={<Home></Home>}/>
+        <Route path='/' element={<Home></Home>} />
         <Route path='/addItem' element={<RequirAuth>
           <AddItem></AddItem>
-        </RequirAuth>}/>
+        </RequirAuth>} />
+        <Route path='/itemDetails/:id' element={<RequirAuth>
+          <ItemDetails></ItemDetails>
+        </RequirAuth>} />
         <Route path='/manageItem' element={<RequirAuth>
           <ManageItem></ManageItem>
-        </RequirAuth>}/>
+        </RequirAuth>} />
         <Route path='/myItem' element={<RequirAuth>
           <MyItem></MyItem>
-        </RequirAuth>}/>
-            
-        <Route path='/login' element={<Login></Login>}/>
-        <Route path='/register' element={<Register></Register>}/>
-        <Route path='/blog' element={<Blog></Blog>}/>
-        <Route path='*' element={<NotFound></NotFound>}/>
-        
-        
+        </RequirAuth>} />
+
+        <Route path='/login' element={<Login></Login>} />
+        <Route path='/register' element={<Register></Register>} />
+        <Route path='/blog' element={<Blog></Blog>} />
+        <Route path='*' element={<NotFound></NotFound>} />
+
+
       </Routes>
-     <Footer></Footer>
+      <Footer></Footer>
     </div>
   );
 }

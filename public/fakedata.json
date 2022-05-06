@@ -1,44 +1,50 @@
 [
     {
-        "id": 1,
+        "_id": 1,
         "name": "GAS T-Shirt",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/qsMXP1Z/tshirt-1.jpg"
+        "img": "https://i.ibb.co/qsMXP1Z/tshirt-1.jpg",
+        "quantity":1
     },
     {
-        "id": 2,
+        "_id": 2,
         "name": "PUR & KLEEN T-shirt",
         "price": "100",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/6ZpgQX5/tshirt-2.jpg"
+        "img": "https://i.ibb.co/6ZpgQX5/tshirt-2.jpg",
+        "quantity":3
     },
     {
-        "id": 3,
+        "_id": 3,
         "name": "PHOENIX T-Shirt",
         "price": "150",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/17J0hgk/tshirt-3.jpg"
+        "img": "https://i.ibb.co/17J0hgk/tshirt-3.jpg",
+        "quantity":2
     },
     {
-        "id": 4,
+        "_id": 4,
         "name": "I LOVE APIs T-Shirt",
         "price": "180",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/19G2MrQ/tshirt-4.jpg"
+        "img": "https://i.ibb.co/19G2MrQ/tshirt-4.jpg",
+        "quantity":1
     },
     {
-        "id": 5,
+        "_id": 5,
         "name": "THAT APIs DEPRECATED",
         "price": "100",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/wJRBzxc/tshirt-5.jpg"
+        "img": "https://i.ibb.co/wJRBzxc/tshirt-5.jpg",
+        "quantity":4
     },
     {
-        "id": 6,
+        "_id": 6,
         "name": "GET ME SOME API NOW",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-        "img": "https://i.ibb.co/vh2Ts2W/tshirt-6.jpg"
+        "img": "https://i.ibb.co/vh2Ts2W/tshirt-6.jpg",
+        "quantity":1
     }
 ]

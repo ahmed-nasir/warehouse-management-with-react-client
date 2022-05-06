@@ -2,7 +2,10 @@ import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -31,7 +34,7 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         await signInWithEmailAndPassword(email, password);
-        
+        toast("Succesfull");
        
     }
     return (
@@ -52,6 +55,7 @@ const Login = () => {
             
             <p>New to warehouse? <Link to="/register" className='text-primary pe-auto text-decoration-none' >Please Register</Link> </p>
             <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' >Reset Password</button> </p>
+            <SocialLogin></SocialLogin>
            </div>
     );
 };
