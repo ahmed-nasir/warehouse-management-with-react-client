@@ -4,7 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 const MyItem = () => {
-    const [user]=useAuthState(auth);
+    const [user] = useAuthState(auth);
     console.log(user.email)
     const [items, setItems] = useState([])
     console.log(items);
@@ -17,16 +17,49 @@ const MyItem = () => {
         }
         getMyItems();
     }, [user])
+    // Item delete
+    const handleDelete = id => {
+        console.log(id)
+        const proceed = window.confirm('Are You sure?')
+        if (proceed) {
+            const url = `http://localhost:5000/item/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    const remaining = items.filter(item => item._id !== id)
+                    setItems(remaining)
+                })
+        }
+    }
     return (
         <div>
-            <h1>My Item {items.name}</h1>
-            {
-                items.map(item=><div>
-                    <h1>{item?.name}</h1>
-                    <h4>{item?.email}</h4>
-                </div>
-                )
-            }
+            <table className="table">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">price</th>
+                        <th scope="col">Mange</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        items.map(item => <tr>
+                            <th scope="row">{item._id}</th>
+                            <td>{item.email}</td>
+                            <td>{item.name}</td>
+                            <td>{item.quantity}</td>
+                            <td>{item.price}</td>
+                            <td><button onClick={()=>handleDelete(item._id)}>Delete</button></td>
+                        </tr>)
+                    }
+                </tbody>
+            </table>
         </div>
     );
 };

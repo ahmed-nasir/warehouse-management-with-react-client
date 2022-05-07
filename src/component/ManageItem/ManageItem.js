@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useItems from '../../hooks/useItems';
 
 
 const ManageItem = () => {
     const [items, setItems] = useItems()
+    const navigate = useNavigate();
 
     const handleDelete = id => {
         console.log(id)
@@ -41,6 +43,7 @@ const ManageItem = () => {
                             <td>{item.name}</td>
                             <td>{item.quantity}</td>
                             <td>{item.price}</td>
+                            <td><button onClick={() => navigate(`/itemDetails/${item._id}`)}>Update</button></td>
                             <td><button onClick={()=>handleDelete(item._id)}>Delete</button></td>
                         </tr>)
                     }

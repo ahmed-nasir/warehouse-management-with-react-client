@@ -31,7 +31,7 @@ const AddItem = () => {
             <h1 className='text'>Please Add a service</h1>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
-                <input className='mb-2' placeholder='Email' value={user.email} readOnly {...register("email")} />
+                <input className='mb-2' placeholder='Email' value={user?.email} readOnly {...register("email")} />
                 <textarea className='mb-2' placeholder='Description' {...register("description")} />
                 <input className='mb-2' placeholder='Price' type="number"  {...register("price")} />
                 <input className='mb-2' placeholder='Quantity' type="number" {...register("quantity")} />
