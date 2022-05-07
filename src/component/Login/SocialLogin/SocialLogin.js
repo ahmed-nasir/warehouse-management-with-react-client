@@ -21,11 +21,13 @@ const SocialLogin = () => {
 
         if (loading) {
             <Loading></Loading>
-            toast("Login succesfull")
+           
         }
     }, [error, loading])
 
-
+    if(user){
+        toast("Login succesfull")
+    }
 
     const location = useLocation();
     const from = location.state?.from?.pathname || '/'

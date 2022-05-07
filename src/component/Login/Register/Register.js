@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 
@@ -62,7 +63,7 @@ const Register = () => {
     const handleSignUp = e => {
         e.preventDefault();
         createUserWithEmailAndPassword(userInfo.email, userInfo.password)
-        // toast("Successfull")
+        
     }
 
 
@@ -79,6 +80,9 @@ const Register = () => {
     // useEffect(() => {
     if (user) {
         navigate(from)
+    }
+    if(user){
+        toast("Successfull")
     }
     // }, [user])
 
