@@ -12,14 +12,16 @@ const ItemDetails = () => {
 
     const itemReduce = () => {
         console.log('Clicked')
-        const reducedQuntity = quantity - 1;
+        if (quantity >= 0) {
+            const reducedQuntity = quantity - 1;
 
-        const url = `https://floating-ravine-13496.herokuapp.com/updateQuntity/${id}`
+            const url = `https://floating-ravine-13496.herokuapp.com/updateQuntity/${id}`
 
 
-        axios.put(url, {
-            quantity: reducedQuntity
-        })
+            axios.put(url, {
+                quantity: reducedQuntity
+            })
+        }
     }
     const handleRestock = (event) => {
         event.preventDefault()
@@ -34,7 +36,7 @@ const ItemDetails = () => {
                 quantity: reducedQuntity
             })
         }
-        
+
     }
 
     return (
