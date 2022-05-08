@@ -14,7 +14,7 @@ const ItemDetails = () => {
         console.log('Clicked')
         const reducedQuntity = quantity - 1;
 
-        const url = `http://localhost:5000/updateQuntity/${id}`
+        const url = `https://floating-ravine-13496.herokuapp.com/updateQuntity/${id}`
 
 
         axios.put(url, {
@@ -27,7 +27,7 @@ const ItemDetails = () => {
         if (restockItem > 0) {
             const reducedQuntity = parseInt(quantity) + parseInt(restockItem);
 
-            const url = `http://localhost:5000/updateQuntity/${id}`
+            const url = `https://floating-ravine-13496.herokuapp.com/updateQuntity/${id}`
 
 
             axios.put(url, {

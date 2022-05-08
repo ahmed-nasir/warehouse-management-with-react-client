@@ -10,7 +10,7 @@ const AddItem = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/addItem`
+        const url = `https://floating-ravine-13496.herokuapp.com/addItem`
         fetch(url, {
             method: 'POST',
             headers: {

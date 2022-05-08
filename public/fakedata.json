@@ -5,8 +5,8 @@
         "price": "300",
         "description": "Organic Ringspun Combed Compact Cotton,100% Cotton,Regular fit, Crew Neck Mid-weight, 5.16 oz/yd2(~175GSM),Reactive Dye, enzyme and silicon washed,Preshurnk to minimize shrinkage,Silk Screen printed",
         "img": "https://i.ibb.co/qsMXP1Z/tshirt-1.jpg",
-        "quantity":1,
-        "supplier":"Kelvin"
+        "quantity": 1,
+        "supplier": "Kelvin"
     },
     {
         "_id": 2,
@@ -14,8 +14,8 @@
         "price": "100",
         "description": "100% Cotton, Ringspun Combed Compact Cotton,Regular fit, Crew Neck Mid-weight, 6.16 oz/yd2(~175GSM),Reactive Dye, enzyme and silicon washed,Preshurnk to minimize shrinkage,Silk Screen printed",
         "img": "https://i.ibb.co/6ZpgQX5/tshirt-2.jpg",
-        "quantity":3,
-        "supplier":"Thomas"
+        "quantity": 3,
+        "supplier": "Thomas"
     },
     {
         "_id": 3,
@@ -23,8 +23,8 @@
         "price": "150",
         "description": "Combed Compact Cotton,100% Cotton,Regular fit, Crew Neck Mid-weight, 5.16 oz/yd2(~175GSM),Reactive Dye, enzyme and silicon washed,Preshurnk to minimize shrinkage,Silk Screen printed",
         "img": "https://i.ibb.co/17J0hgk/tshirt-3.jpg",
-        "quantity":2,
-        "supplier":"Alen"
+        "quantity": 2,
+        "supplier": "Alen"
     },
     {
         "_id": 4,
@@ -32,8 +32,8 @@
         "price": "180",
         "description": "Compact Cotton,100% Cotton,Regular fit, Crew Neck Mid-weight, 5.16 oz/yd2(~175GSM),Reactive Dye, enzyme and silicon washed,Preshurnk to minimize shrinkage,Silk Screen printed",
         "img": "https://i.ibb.co/19G2MrQ/tshirt-4.jpg",
-        "quantity":1,
-        "supplier":"kashem"
+        "quantity": 1,
+        "supplier": "kashem"
     },
     {
         "_id": 5,
@@ -41,8 +41,8 @@
         "price": "100",
         "description": "Organic Ringspun Combed Compact Cotton,100% Cotton,Regular fit, Crew Neck Mid-weight, 5.16 oz/yd2(~175GSM),Reactive Dye, enzyme and silicon washed,Preshurnk to minimize shrinkage,Silk Screen printed",
         "img": "https://i.ibb.co/wJRBzxc/tshirt-5.jpg",
-        "quantity":4,
-        "supplier":"Smith"
+        "quantity": 4,
+        "supplier": "Smith"
     },
     {
         "_id": 6,
@@ -50,7 +50,16 @@
         "price": "300",
         "description": "Organic Ringspun Combed Compact Cotton,100% Cotton,Regular fit, Crew Neck Mid-weight, 5.16 oz/yd2(~175GSM),Reactive Dye, enzyme and silicon washed,Preshurnk to minimize shrinkage,Silk Screen printed",
         "img": "https://i.ibb.co/vh2Ts2W/tshirt-6.jpg",
-        "quantity":1,
-        "supplier":"kashem"
+        "quantity": 1,
+        "supplier": "kashem"
+    },
+    {
+        "_id": 7,
+        "name": "GET ME SOME API NOW",
+        "price": "300",
+        "description": "Organic Ringspun Combed Compact Cotton,100% Cotton,Regular fit, Crew Neck Mid-weight, 5.16 oz/yd2(~175GSM),Reactive Dye, enzyme and silicon washed,Preshurnk to minimize shrinkage,Silk Screen printed",
+        "img": "https://i.ibb.co/vh2Ts2W/tshirt-6.jpg",
+        "quantity": 1,
+        "supplier": "kashem"
     }
 ]

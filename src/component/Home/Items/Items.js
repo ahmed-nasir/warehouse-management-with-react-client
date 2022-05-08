@@ -8,7 +8,7 @@ const Items = () => {
     useEffect(() => {
         // 
         // fakedata.json
-        fetch('http://localhost:5000/limitItem')
+        fetch('https://floating-ravine-13496.herokuapp.com/limitItem')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);

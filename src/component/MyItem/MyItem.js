@@ -11,7 +11,7 @@ const MyItem = () => {
     useEffect(() => {
         const getMyItems = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/myItem?email=${email}`;
+            const url = `https://floating-ravine-13496.herokuapp.com/myItem?email=${email}`;
             const { data } = await axios.get(url);
             setItems(data);
         }
@@ -22,7 +22,7 @@ const MyItem = () => {
         console.log(id)
         const proceed = window.confirm('Are You sure?')
         if (proceed) {
-            const url = `http://localhost:5000/item/${id}`
+            const url = `https://floating-ravine-13496.herokuapp.com/item/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

@@ -40,7 +40,7 @@ const Login = () => {
     }
 
     if (error) {
-        toast(`Error: {error?.message}`)
+        toast(error?.message)
     }
 
     const handleSubmit = async event => {
@@ -49,16 +49,16 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         await signInWithEmailAndPassword(email, password);
-        
+
     }
 
-    if(user){
+    if (user) {
         toast("Login Successfull")
     }
 
     const navigateRegister = event => {
         navigate('/register');
-        
+
     }
 
     const resetPassword = async () => {
@@ -67,31 +67,33 @@ const Login = () => {
             await sendPasswordResetEmail(email);
             toast('Sent email');
         }
-        else{
+        else {
             toast('please enter your email address');
         }
     }
 
     return (
-        <div className='container w-50 mx-auto'>
-            {/* <PageTitle title="Login"></PageTitle> */}
-            <h2 className='text-primary text-center mt-2'>Please Login</h2>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
-                </Form.Group>
-                <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
-                    Login
-                </Button>
-            </Form>
-            {errorElement}
-            <p>New to urban fasion? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
-            <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
-            <SocialLogin></SocialLogin>
-           
+        <div className='border border-1 rounded-3 w-50 mx-auto my-5 '>
+            <div className='container w-50 mx-auto'>
+                {/* <PageTitle title="Login"></PageTitle> */}
+                <h2 className='text-primary text-center mt-2'>Please Login</h2>
+                <Form onSubmit={handleSubmit}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
+                    </Form.Group>
+                    <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
+                        Login
+                    </Button>
+                </Form>
+                {errorElement}
+                <p>New to urban fasion? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
+                <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+                <SocialLogin></SocialLogin>
+
+            </div>
         </div>
     );
 };

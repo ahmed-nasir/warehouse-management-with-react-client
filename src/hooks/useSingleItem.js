@@ -7,7 +7,7 @@ const useSingleItem = (id) => {
     const [item, setItem] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/limitItem/${id}`)
+        axios.get(`https://floating-ravine-13496.herokuapp.com/limitItem/${id}`)
             .then(res=>setItem(res.data))
             
     }, [id,item])
