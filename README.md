@@ -27,4 +27,5 @@ Click here [URBAN FASHION](https://warehouse-management-e1fee.web.app/)
 - React firebase hooks v-5.0.3
 - React toastify v-8.2.0
 - Axios
-
+- Node
+- express
