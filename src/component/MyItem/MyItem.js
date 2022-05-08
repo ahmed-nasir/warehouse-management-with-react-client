@@ -1,13 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyItem = () => {
     const [user] = useAuthState(auth);
-    console.log(user.email)
     const [items, setItems] = useState([])
-    console.log(items);
+    const navigate= useNavigate()
     useEffect(() => {
         const getMyItems = async () => {
             const email = user.email;
@@ -35,31 +35,36 @@ const MyItem = () => {
         }
     }
     return (
-        <div>
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th scope="col">id</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">price</th>
-                        <th scope="col">Mange</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        items.map(item => <tr>
-                            <th scope="row">{item._id}</th>
-                            <td>{item.email}</td>
-                            <td>{item.name}</td>
-                            <td>{item.quantity}</td>
-                            <td>{item.price}</td>
-                            <td><button onClick={()=>handleDelete(item._id)}>Delete</button></td>
-                        </tr>)
-                    }
-                </tbody>
-            </table>
+        <div className='container'>
+            <div className='table-responsive'>
+                <table className="table table-striped align-middle ">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">price</th>
+                            <th scope="col">Supplier</th>
+                            <th scope="col">Mange</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            items.map(item => <tr>
+                                <th scope="row">{item._id}</th>
+                                <td>{item.name}</td>
+                                <td>{item.quantity}</td>
+                                <td>{item.price}</td>
+                                <td>{item.supplier}</td>
+                                <td>
+                                    <button onClick={() => navigate(`/itemDetails/${item._id}`)}>Update</button>
+                                    <button className='m-2' onClick={() => handleDelete(item._id)}>Delete</button>
+                                </td>
+                            </tr>)
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

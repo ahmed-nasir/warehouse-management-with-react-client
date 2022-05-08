@@ -24,31 +24,37 @@ const ManageItem = () => {
         }
     }
     return (
-        <div>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">id</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">price</th>
-                        <th scope="col">Mange</th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        items.map(item => <tr>
-                            <th scope="row">{item._id}</th>
-                            <td>{item.name}</td>
-                            <td>{item.quantity}</td>
-                            <td>{item.price}</td>
-                            <td><button onClick={() => navigate(`/itemDetails/${item._id}`)}>Update</button></td>
-                            <td><button onClick={()=>handleDelete(item._id)}>Delete</button></td>
-                        </tr>)
-                    }
-                </tbody>
-            </table>
+        <div className='container'>
+            <div className='table-responsive'>
+                <table class="table table-striped align-middle text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">price</th>
+                            <th scope="col">Supplier</th>
+                            <th scope="col">Mange</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            items.map(item => <tr>
+                                <th scope="row">{item._id}</th>
+                                <td>{item.name}</td>
+                                <td>{item.quantity}</td>
+                                <td>{item.price}</td>
+                                <td>{item.supplier}</td>
+                                <td>
+                                    <button onClick={() => navigate(`/itemDetails/${item._id}`)}>Update</button>
+                                    <button className='m-2' onClick={() => handleDelete(item._id)}>Delete</button>
+                                </td>
+                            </tr>)
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

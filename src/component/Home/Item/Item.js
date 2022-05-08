@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const Item = ({ product }) => {
     const navigate = useNavigate();
 
-    const { _id, name, img, description,quantity,price } = product;
+    const { _id, name, img, description,quantity,price,supplier } = product;
     // console.log(_id)
 
     return (
@@ -18,10 +18,13 @@ const Item = ({ product }) => {
                         {description}
                     </Card.Text>
                     <Card.Text>
-                    Quantity:{quantity}
+                    <strong>Quantity</strong>:{quantity}
                     </Card.Text>
                     <Card.Text>
-                    Price:{price}
+                    <strong>Price</strong>: ${price}
+                    </Card.Text>
+                    <Card.Text>
+                    <strong>Supplier</strong> : {supplier}
                     </Card.Text>
                     <Button variant="primary" onClick={() => navigate(`/itemDetails/${_id}`)}>Update</Button>
                 </Card.Body>

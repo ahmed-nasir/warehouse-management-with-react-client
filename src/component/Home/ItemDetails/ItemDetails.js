@@ -34,6 +34,7 @@ const ItemDetails = () => {
                 quantity: reducedQuntity
             })
         }
+        
     }
 
     return (
@@ -55,7 +56,7 @@ const ItemDetails = () => {
                                 <button className='btn btn-primary m-3' onClick={itemReduce}>Delevery</button>
                             </div>
                             <form onSubmit={handleRestock}>
-                                <input className='' type="Number" id="restock" name="restock" placeholder='amount' />
+                                <input className='' type="Number" id="restock" name="restock" placeholder='Quantity' />
                                 {/* <input className='' type="submit" value="Restock" /> */}
                                 <button className='btn btn-primary m-3'>Restock</button>
                             </form>
