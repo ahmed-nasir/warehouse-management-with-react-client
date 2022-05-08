@@ -22,7 +22,7 @@ const MyItem = () => {
         console.log(id)
         const proceed = window.confirm('Are You sure?')
         if (proceed) {
-            const url = `https://floating-ravine-13496.herokuapp.com/item/${id}`
+            const url = `http://localhost:5000/item/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

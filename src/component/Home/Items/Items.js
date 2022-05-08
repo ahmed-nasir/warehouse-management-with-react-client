@@ -17,7 +17,7 @@ const Items = () => {
     }, [products])
     return (
         <div className='container my-5'>
-            <h2 className='text-center'>Items</h2>
+            <h2 className='text-center'>Items In Stock</h2>
             <div className='row justify-content-center'>
                 {
                     products.map(product => <Item key={product._id} product={product}></Item>)
