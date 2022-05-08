@@ -12,7 +12,7 @@ const ItemDetails = () => {
 
     const itemReduce = () => {
         console.log('Clicked')
-        if (quantity >= 0) {
+        if (quantity > 0) {
             const reducedQuntity = quantity - 1;
 
             const url = `https://floating-ravine-13496.herokuapp.com/updateQuntity/${id}`
