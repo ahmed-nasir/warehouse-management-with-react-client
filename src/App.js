@@ -14,6 +14,7 @@ import ManageItem from './component/ManageItem/ManageItem';
 import Blog from './component/Blog/Blog';
 import ItemDetails from './component/Home/ItemDetails/ItemDetails';
 import { ToastContainer } from 'react-toastify';
+import ContactUs from './component/Home/ContactUs/ContactUs';
 
 
 
@@ -41,6 +42,8 @@ function App() {
         <Route path='/login' element={<Login></Login>} />
         <Route path='/register' element={<Register></Register>} />
         <Route path='/blog' element={<Blog></Blog>} />
+
+        <Route path='/contact' element={<ContactUs></ContactUs>}/>
         <Route path='*' element={<NotFound></NotFound>} />
 
 

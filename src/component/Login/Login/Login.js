@@ -36,7 +36,7 @@ const Login = () => {
     }
 
     if (user) {
-        //  navigate(from, { replace: true });
+         navigate(from, { replace: true });
     }
 
     if (error) {
@@ -51,7 +51,7 @@ const Login = () => {
         await signInWithEmailAndPassword(email, password);
         const { data } = await axios.post('https://floating-ravine-13496.herokuapp.com/login', { email })
         localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
 
     if (user) {
